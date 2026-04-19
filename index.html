@@ -24,14 +24,14 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .glass-card {
+        .premium-card {
             background: #ffffff;
             border: 1px solid #f4f4f5;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        .glass-card:hover {
+        .premium-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
             border-color: #e4e4e7;
@@ -118,16 +118,22 @@
         id="navbar">
         <div class="text-xl font-extrabold tracking-tighter text-black uppercase cursor-pointer"
             onclick="window.scrollTo(0,0)">
-            M. Rigel<span class="text-blue-600">.</span>
+            Rigeel<span class="text-blue-600">.</span>
         </div>
 
         <div class="flex items-center gap-8">
-            <div class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.15em] text-zinc-500">
+            <div class="hidden md:flex gap-6 text-[11px] font-bold uppercase tracking-[0.15em] text-zinc-500">
                 <a href="#profil" class="hover:text-black transition-colors" data-i18n="nav_profile">Intro</a>
+                <a href="#education" class="hover:text-black transition-colors" data-i18n="nav_education">Pendidikan</a>
+                <a href="#experience" class="hover:text-black transition-colors" data-i18n="nav_experience">Rekam
+                    Jejak</a>
                 <a href="#services" class="hover:text-black transition-colors" data-i18n="nav_services">Solusi</a>
-                <a href="#experience" class="hover:text-black transition-colors"
-                    data-i18n="nav_experience">Portfolio</a>
-                <a href="#skills" class="hover:text-black transition-colors" data-i18n="nav_skills">Tech Stack</a>
+                <a href="#skills" class="hover:text-black transition-colors" data-i18n="nav_skills">Skills</a>
+                <a href="#gallery" class="hover:text-black transition-colors" data-i18n="nav_gallery">Galeri</a>
+                <a href="#certificates" class="hover:text-black transition-colors"
+                    data-i18n="nav_certificates">Sertifikat</a>
+                <a href="#testimonials" class="hover:text-black transition-colors"
+                    data-i18n="nav_testimonials">Testimoni</a>
             </div>
 
             <!-- Language Toggle -->
@@ -152,12 +158,20 @@
         <div class="flex flex-col gap-6 text-xl font-bold text-zinc-800">
             <a href="#profil" onclick="this.closest('#mobile-menu').classList.add('hidden')"
                 data-i18n="nav_profile">Intro</a>
+            <a href="#education" onclick="this.closest('#mobile-menu').classList.add('hidden')"
+                data-i18n="nav_education">Pendidikan</a>
+            <a href="#experience" onclick="this.closest('#mobile-menu').classList.add('hidden')"
+                data-i18n="nav_experience">Rekam Jejak</a>
             <a href="#services" onclick="this.closest('#mobile-menu').classList.add('hidden')"
                 data-i18n="nav_services">Solusi</a>
-            <a href="#experience" onclick="this.closest('#mobile-menu').classList.add('hidden')"
-                data-i18n="nav_experience">Portfolio</a>
-            <a href="#skills" onclick="this.closest('#mobile-menu').classList.add('hidden')" data-i18n="nav_skills">Tech
-                Stack</a>
+            <a href="#skills" onclick="this.closest('#mobile-menu').classList.add('hidden')"
+                data-i18n="nav_skills">Skills</a>
+            <a href="#gallery" onclick="this.closest('#mobile-menu').classList.add('hidden')"
+                data-i18n="nav_gallery">Galeri</a>
+            <a href="#certificates" onclick="this.closest('#mobile-menu').classList.add('hidden')"
+                data-i18n="nav_certificates">Sertifikat</a>
+            <a href="#testimonials" onclick="this.closest('#mobile-menu').classList.add('hidden')"
+                data-i18n="nav_testimonials">Testimoni</a>
         </div>
         <button class="absolute top-6 right-6" onclick="document.getElementById('mobile-menu').classList.add('hidden')">
             <i data-lucide="x"></i>
@@ -253,8 +267,95 @@
         </div>
     </section>
 
+    <!-- Stats Section -->
+    <section id="stats" class="py-16 bg-black text-white">
+        <div class="max-w-5xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-4xl md:text-5xl font-black mb-2 text-white" id="stat-years">3+</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-500" data-i18n="stat_years">
+                        Tahun Pengalaman</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-black mb-2 text-white">10+</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-500"
+                        data-i18n="stat_projects">Proyek Digital</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-black mb-2 text-white">5+</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-500"
+                        data-i18n="stat_clients">UMKM Didigitalisasi</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-black mb-2 text-white">2</div>
+                    <div class="text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-500" data-i18n="stat_bots">
+                        Bot Aktif</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 bg-white relative">
+        <div class="max-w-5xl mx-auto px-6 md:px-12">
+            <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-400 mb-16" data-aos="fade-right"
+                data-i18n="section_education">PENDIDIKAN</h2>
+
+            <div class="space-y-16 border-l border-zinc-100 ml-3 md:ml-0 pl-8 md:pl-0">
+                <!-- Item 1 -->
+                <div class="flex flex-col md:flex-row gap-2 md:gap-12 relative" data-aos="fade-up">
+                    <span
+                        class="absolute -left-[37px] md:hidden w-4 h-4 rounded-full bg-zinc-200 border-4 border-white"></span>
+                    <div class="md:w-1/3 text-zinc-400 font-bold text-xs uppercase tracking-wider pt-1">2016 — 2022
+                    </div>
+                    <div class="md:w-2/3">
+                        <h4 class="text-2xl font-bold mb-2 text-black" data-i18n="edu_1_title">S1 Teknik Mesin</h4>
+                        <p class="text-zinc-500 text-[11px] font-bold uppercase tracking-widest mb-4">Universitas
+                            Muhammadiyah Malang</p>
+                        <p class="text-base text-zinc-600 leading-relaxed" data-i18n="edu_1_desc">Menyelesaikan studi
+                            Strata 1 di bidang Teknik Mesin. Mempelajari dasar-dasar desain mekanikal, manufaktur, dan
+                            analisis teknik menggunakan AutoCAD dan Inventor.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="flex flex-col md:flex-row gap-2 md:gap-12 relative" data-aos="fade-up">
+                    <span
+                        class="absolute -left-[37px] md:hidden w-4 h-4 rounded-full bg-zinc-200 border-4 border-white"></span>
+                    <div class="md:w-1/3 text-zinc-400 font-bold text-xs uppercase tracking-wider pt-1">2015 — 2016
+                    </div>
+                    <div class="md:w-2/3">
+                        <h4 class="text-2xl font-bold mb-2 text-black" data-i18n="edu_1_title">S1 Mekatronika Otomotif
+                        </h4>
+                        <p class="text-zinc-500 text-[11px] font-bold uppercase tracking-widest mb-4">Sekolah Tinggi
+                            Teknik Atlas Nusantara</p>
+                        <p class="text-base text-zinc-600 leading-relaxed" data-i18n="edu_1_desc">Studi Perguruan Tinggi
+                            Strata 1 di jurusan Mekatronika Otomotif. Mempelajari dasar-dasar Eloktronika, dan Otomotif.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="flex flex-col md:flex-row gap-2 md:gap-12 relative" data-aos="fade-up">
+                    <span
+                        class="absolute -left-[37px] md:hidden w-4 h-4 rounded-full bg-zinc-200 border-4 border-white"></span>
+                    <div class="md:w-1/3 text-zinc-400 font-bold text-xs uppercase tracking-wider pt-1">2011 — 2014
+                    </div>
+                    <div class="md:w-2/3">
+                        <h4 class="text-2xl font-bold mb-2 text-black" data-i18n="edu_2_title">SMA / Sederajat</h4>
+                        <p class="text-zinc-500 text-[11px] font-bold uppercase tracking-widest mb-4">MA MAMBAUS
+                            SHOLIHIN</p>
+                        <p class="text-base text-zinc-600 leading-relaxed" data-i18n="edu_2_desc">Menyelesaikan
+                            pendidikan menengah atas dengan fokus pada bidang agama islam dan jurusan IPA (Ilmu
+                            Pengetahuan Alam) sebagai fondasi awal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Experience Section -->
-    <section id="experience" class="py-24 bg-white relative">
+    <section id="experience" class="py-24 bg-zinc-50 relative">
         <div class="max-w-5xl mx-auto px-6 md:px-12">
             <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-400 mb-16" data-aos="fade-right"
                 data-i18n="section_experience">REKAM JEJAK & KREDIBILITAS</h2>
@@ -272,7 +373,7 @@
                         <p class="text-zinc-500 text-[11px] font-bold uppercase tracking-widest mb-4">PT. Sumber Jaya
                             Grup</p>
                         <p class="text-base text-zinc-600 leading-relaxed" data-i18n="exp_1_desc">Mengelola operasional
-                            agen LPG skala besar sekaligus mengembangkan sistem digital internal untuk efisiensi data.
+                            usaha skala besar sekaligus mengembangkan sistem digital internal untuk efisiensi data.
                             Bukti nyata bahwa saya paham kebutuhan bisnis, bukan cuma teknis.</p>
                     </div>
                 </div>
@@ -284,13 +385,50 @@
                     <div class="md:w-1/3 text-zinc-400 font-bold text-xs uppercase tracking-wider pt-1">2016 — 2023
                     </div>
                     <div class="md:w-2/3">
-                        <h4 class="text-2xl font-bold mb-2 text-black" data-i18n="exp_2_role">Engineering Background
+                        <h4 class="text-2xl font-bold mb-2 text-black" data-i18n="exp_2_role">Mechanical Engineering
                         </h4>
-                        <p class="text-zinc-500 text-[11px] font-bold uppercase tracking-widest mb-4">Universitas
+                        <p class="text-zinc-500 text-[11px] font-bold uppercase tracking-widest mb-6">Universitas
                             Muhammadiyah Malang</p>
-                        <p class="text-base text-zinc-600 leading-relaxed" data-i18n="exp_2_desc">Latar belakang teknik
-                            mesin melatih saya berpikir struktural dan berbasis solusi. Skill ini yang saya bawa ke
-                            setiap project coding saya.</p>
+
+                        <!-- Praktikum -->
+                        <div class="mb-5">
+                            <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-400 mb-3">— Praktikum
+                            </p>
+                            <ul class="text-sm text-zinc-600 leading-relaxed space-y-1.5 pl-1">
+                                <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> Permesinan dasar
+                                    (Pengelasan, Pembubutan, Pengecoran Logam, dan lain sebagainya)</li>
+                                <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> Pengaplikasian motor
+                                    pada mesin-mesin dasar</li>
+                                <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> Pengoperasian Software
+                                    Autodesk AutoCAD 2D &amp; 3D Modelling</li>
+                                <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> Pelatihan Aplikasi
+                                    Teknologi Informasi</li>
+                            </ul>
+                        </div>
+
+                        <!-- Study Excursie -->
+                        <div class="mb-5">
+                            <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-400 mb-3">— Study
+                                Excursie</p>
+                            <ul class="text-sm text-zinc-600 leading-relaxed space-y-1.5 pl-1">
+                                <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> PT. PINDAD (PERSERO)
+                                </li>
+                                <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> UPK PPUKMP Pulogadung
+                                    Jakarta</li>
+                                <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> PT. MMC METAL
+                                    FABRICATION</li>
+                            </ul>
+                        </div>
+
+                        <!-- Magang Kerja -->
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-zinc-400 mb-3">— Magang
+                                Kerja</p>
+                            <ul class="text-sm text-zinc-600 leading-relaxed space-y-1.5 pl-1">
+                                <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> PT. Petrokimia Gresik —
+                                    Departemen Fabrikasi</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -306,8 +444,30 @@
                         <ul class="text-base text-zinc-600 leading-relaxed list-disc pl-4 space-y-2">
                             <li data-i18n="exp_3_item1">Pengalaman industri di PT. Petrokimia Gresik (Sistem Fabrikasi).
                             </li>
-                            <li data-i18n="exp_3_item2">Aktif mengedukasi teknologi di BEM FT UMM.</li>
-                            <li data-i18n="exp_3_item3">Membangun jiwa entrepreneurship di Himpunan Mahasiswa.</li>
+                            <li data-i18n="exp_3_item2">Aktif berorganisasi di HMM (Himpunan Mahasiswa Mesin) dan BEM
+                                (Badan Eksekutif Mahasiswa) FT UMM.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="flex flex-col md:flex-row gap-2 md:gap-12 relative" data-aos="fade-up">
+                    <span
+                        class="absolute -left-[37px] md:hidden w-4 h-4 rounded-full bg-zinc-200 border-4 border-white"></span>
+                    <div class="md:w-1/3 text-zinc-400 font-bold text-xs uppercase tracking-wider pt-1"
+                        data-i18n="exp_4_date">WIRAUSAHA & PEMASARAN DIGITAL</div>
+                    <div class="md:w-2/3">
+                        <h4 class="text-2xl font-bold mb-2 text-black" data-i18n="exp_4_role">Digital Marketing &amp;
+                            Entrepreneurship</h4>
+                        <ul class="text-sm text-zinc-600 leading-relaxed space-y-1.5 pl-1 mt-4">
+                            <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> <span>Travel Agent —
+                                    pengelolaan paket wisata &amp; layanan perjalanan</span></li>
+                            <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> <span>Meta Ads —
+                                    pengelolaan iklan berbayar di Facebook &amp; Instagram</span></li>
+                            <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> <span>Event Organizer —
+                                    koordinasi &amp; eksekusi berbagai event</span></li>
+                            <li class="flex gap-2"><span class="text-zinc-300 mt-1">●</span> <span>Kolaborasi dengan
+                                    UMKM — membantu digitalisasi bisnis lokal</span></li>
                         </ul>
                     </div>
                 </div>
@@ -327,35 +487,44 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="glass-card p-10 rounded-2xl bg-white" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-8">
-                        <i data-lucide="layout" class="w-6 h-6 text-blue-600"></i>
+                <div class="premium-card p-10 rounded-3xl bg-white group cursor-default" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="w-14 h-14 bg-zinc-50 border border-zinc-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-sm">
+                        <i data-lucide="layout" class="w-6 h-6 text-black"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-black" data-i18n="service_1_title">Custom Apps Development
                     </h3>
-                    <p class="text-sm text-zinc-500 leading-relaxed" data-i18n="service_1_desc">Membangun sistem
+                    <p class="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors"
+                        data-i18n="service_1_desc">Membangun sistem
                         manajemen yang 100% fit dengan alur kerja bisnis Anda. Dari kasir, gudang, hingga dashboard
                         eksekutif.</p>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="glass-card p-10 rounded-2xl bg-white" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-8">
-                        <i data-lucide="bot" class="w-6 h-6 text-green-600"></i>
+                <div class="premium-card p-10 rounded-3xl bg-white group cursor-default" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div
+                        class="w-14 h-14 bg-zinc-50 border border-zinc-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-sm">
+                        <i data-lucide="bot" class="w-6 h-6 text-black"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-black" data-i18n="service_2_title">Business Automation</h3>
-                    <p class="text-sm text-zinc-500 leading-relaxed" data-i18n="service_2_desc">Biarkan 'robot' yang
+                    <p class="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors"
+                        data-i18n="service_2_desc">Biarkan 'robot' yang
                         bekerja. Saya membuat bot (WA/Telegram) untuk handle tugas rutin agar Anda bisa fokus ke
                         strategi bisnis.</p>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="glass-card p-10 rounded-2xl bg-white" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-8">
-                        <i data-lucide="monitor" class="w-6 h-6 text-purple-600"></i>
+                <div class="premium-card p-10 rounded-3xl bg-white group cursor-default" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div
+                        class="w-14 h-14 bg-zinc-50 border border-zinc-100 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:shadow-sm">
+                        <i data-lucide="monitor" class="w-6 h-6 text-black"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-black" data-i18n="service_3_title">Professional Branding</h3>
-                    <p class="text-sm text-zinc-500 leading-relaxed" data-i18n="service_3_desc">Website bukan cuma
+                    <p class="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors"
+                        data-i18n="service_3_desc">Website bukan cuma
                         pajangan. Saya bangun landing page yang estetis dan fungsional untuk menaikkan nilai jual brand
                         Anda.</p>
                 </div>
@@ -391,6 +560,257 @@
         </div>
     </section>
 
+    <!-- Portfolio Cards Section -->
+    <section id="portfolio" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="mb-16" data-aos="fade-up">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-400 mb-4 block"
+                    data-i18n="section_portfolio">HASIL KARYA NYATA</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-black" data-i18n="portfolio_subtitle">Project yang
+                    Pernah Dikerjakan</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="premium-card rounded-3xl overflow-hidden group cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="0">
+                    <div
+                        class="h-56 bg-zinc-50 relative flex items-center justify-center overflow-hidden border-b border-zinc-100">
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] [background-size:16px_16px] group-hover:opacity-60 transition-opacity duration-700">
+                        </div>
+                        <i data-lucide="bot"
+                            class="w-16 h-16 text-zinc-300 group-hover:scale-110 group-hover:text-black transition-all duration-500 relative z-10"></i>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-black mb-3 block">Python ·
+                            Telegram · Playwright</span>
+                        <h3 class="text-lg font-bold text-black mb-3" data-i18n="proj_1_title">Bot Otomasi Usaha</h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors"
+                            data-i18n="proj_1_desc">Bot berbasis Python +
+                            Playwright untuk otomasi stok & laporan harian usaha, terintegrasi Telegram.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="premium-card rounded-3xl overflow-hidden group cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="h-56 bg-zinc-50 relative flex items-center justify-center overflow-hidden border-b border-zinc-100">
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] [background-size:16px_16px] group-hover:opacity-60 transition-opacity duration-700">
+                        </div>
+                        <i data-lucide="layout-dashboard"
+                            class="w-16 h-16 text-zinc-300 group-hover:scale-110 group-hover:text-black transition-all duration-500 relative z-10"></i>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-black mb-3 block">HTML ·
+                            CSS · JavaScript</span>
+                        <h3 class="text-lg font-bold text-black mb-3" data-i18n="proj_2_title">Sistem Manajemen Internal
+                        </h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors"
+                            data-i18n="proj_2_desc">Dashboard internal
+                            untuk monitoring operasional harian, manajemen data, dan laporan keuangan sederhana.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="premium-card rounded-3xl overflow-hidden group cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div
+                        class="h-56 bg-zinc-50 relative flex items-center justify-center overflow-hidden border-b border-zinc-100">
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] [background-size:16px_16px] group-hover:opacity-60 transition-opacity duration-700">
+                        </div>
+                        <i data-lucide="globe"
+                            class="w-16 h-16 text-zinc-300 group-hover:scale-110 group-hover:text-black transition-all duration-500 relative z-10"></i>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-black mb-3 block">HTML ·
+                            CSS · JavaScript</span>
+                        <h3 class="text-lg font-bold text-black mb-3" data-i18n="proj_3_title">Landing Page & Portfolio
+                            Online
+                        </h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors"
+                            data-i18n="proj_3_desc">Website Portofolio interaktif
+                            dengan fitur bilingual, animasi AOS, dan desain modern!</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="premium-card rounded-3xl overflow-hidden group cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div
+                        class="h-56 bg-zinc-50 relative flex items-center justify-center overflow-hidden border-b border-zinc-100">
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] [background-size:16px_16px] group-hover:opacity-60 transition-opacity duration-700">
+                        </div>
+                        <i data-lucide="store"
+                            class="w-16 h-16 text-zinc-300 group-hover:scale-110 group-hover:text-black transition-all duration-500 relative z-10"></i>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-black mb-3 block">Web App ·
+                            Database</span>
+                        <h3 class="text-lg font-bold text-black mb-3" data-i18n="proj_4_title">Aplikasi Terintegrasi
+                            Toko</h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors"
+                            data-i18n="proj_4_desc">Aplikasi untuk mengatur manajemen stok gudang dan pencatatan
+                            pengeluaran agar selalu sinkron secara berkala.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="premium-card rounded-3xl overflow-hidden group cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div
+                        class="h-56 bg-zinc-50 relative flex items-center justify-center overflow-hidden border-b border-zinc-100">
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] [background-size:16px_16px] group-hover:opacity-60 transition-opacity duration-700">
+                        </div>
+                        <i data-lucide="coffee"
+                            class="w-16 h-16 text-zinc-300 group-hover:scale-110 group-hover:text-black transition-all duration-500 relative z-10"></i>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-black mb-3 block">Web App ·
+                            POS</span>
+                        <h3 class="text-lg font-bold text-black mb-3" data-i18n="proj_5_title">Web App POS Coffee Shop
+                        </h3>
+                        <p class="text-sm text-zinc-500 leading-relaxed group-hover:text-zinc-700 transition-colors"
+                            data-i18n="proj_5_desc">Website app modern meliputi fitur kasir yang sinkron dengan laporan
+                            harian, mingguan, bulanan bahkan tahunan secara otomatis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-zinc-50">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="mb-16" data-aos="fade-up">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-400 mb-4 block"
+                    data-i18n="section_gallery">MOMEN & PENGALAMAN</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-black" data-i18n="gallery_subtitle">Galeri
+                    Perjalanan</h2>
+            </div>
+            <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+            <p id="gallery-empty" class="hidden text-center text-zinc-400 text-sm py-8" data-i18n="gallery_empty">Galeri
+                segera hadir — upload galeri1.jpg s/d galeri10.jpg</p>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="mb-16" data-aos="fade-up">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-400 mb-4 block"
+                    data-i18n="section_certificates">BUKTI KOMPETENSI</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-black" data-i18n="certificates_subtitle">Sertifikat
+                    & Penghargaan</h2>
+            </div>
+            <div id="cert-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+            <p id="cert-empty" class="hidden text-center text-zinc-400 text-sm py-8" data-i18n="cert_empty">Sertifikat
+                segera hadir — upload sertifikat1.jpg s/d sertifikat10.jpg</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-black text-white">
+        <div class="max-w-5xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-500 mb-4 block"
+                    data-i18n="section_testimonials">APA KATA MEREKA</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white" data-i18n="testimonials_subtitle">Testimoni &
+                    Referensi</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimoni 1 -->
+                <div class="border border-zinc-800 rounded-3xl p-10 hover:bg-zinc-900/50 hover:border-zinc-700 transition-all duration-500 group"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <p class="text-zinc-400 group-hover:text-zinc-300 transition-colors leading-relaxed mb-8 text-base font-medium"
+                        data-i18n="testi_1_text">"Rigel berhasil
+                        membangun sistem monitoring stok yang sangat membantu operasional kami. Prosesnya cepat,
+                        hasilnya jauh melampaui ekspektasi."</p>
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="w-12 h-12 rounded-full bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center text-white font-bold text-sm">
+                            SJ</div>
+                        <div>
+                            <div class="font-bold text-white text-sm" data-i18n="testi_1_name">PT. Sumber Jaya Grup
+                            </div>
+                            <div class="text-zinc-500 group-hover:text-zinc-400 transition-colors text-[10px] font-bold uppercase tracking-widest mt-1"
+                                data-i18n="testi_1_role">Klien —
+                                Sistem Internal</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimoni 2 -->
+                <div class="border border-zinc-800 rounded-3xl p-10 hover:bg-zinc-900/50 hover:border-zinc-700 transition-all duration-500 group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-zinc-400 group-hover:text-zinc-300 transition-colors leading-relaxed mb-8 text-base font-medium"
+                        data-i18n="testi_2_text">"Bot Telegram yang
+                        dibuat Rigel benar-benar menghemat waktu kami. Laporan yang biasanya manual kini berjalan
+                        otomatis setiap hari."</p>
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="w-12 h-12 rounded-full bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center text-white font-bold text-sm">
+                            MK</div>
+                        <div>
+                            <div class="font-bold text-white text-sm" data-i18n="testi_2_name">Mitra UMKM</div>
+                            <div class="text-zinc-500 group-hover:text-zinc-400 transition-colors text-[10px] font-bold uppercase tracking-widest mt-1"
+                                data-i18n="testi_2_role">Klien —
+                                Business Automation</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimoni 3 -->
+                <div class="border border-zinc-800 rounded-3xl p-10 hover:bg-zinc-900/50 hover:border-zinc-700 transition-all duration-500 group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-zinc-400 group-hover:text-zinc-300 transition-colors leading-relaxed mb-8 text-base font-medium"
+                        data-i18n="testi_3_text">"Event yang
+                        diorganisir Rigel berjalan sangat profesional dan terstruktur. Kemampuan koordinasinya patut
+                        diacungi jempol."</p>
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="w-12 h-12 rounded-full bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center text-white font-bold text-sm">
+                            EO</div>
+                        <div>
+                            <div class="font-bold text-white text-sm" data-i18n="testi_3_name">Rekan Event Organizer
+                            </div>
+                            <div class="text-zinc-500 group-hover:text-zinc-400 transition-colors text-[10px] font-bold uppercase tracking-widest mt-1"
+                                data-i18n="testi_3_role">
+                                Kolaborasi — Event & Komunitas</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimoni 4 -->
+                <div class="border border-zinc-800 rounded-3xl p-10 hover:bg-zinc-900/50 hover:border-zinc-700 transition-all duration-500 group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <p class="text-zinc-400 group-hover:text-zinc-300 transition-colors leading-relaxed mb-8 text-base font-medium"
+                        data-i18n="testi_4_text">"Rigel adalah sosok
+                        yang adaptif dan selalu siap belajar hal baru. Kontribusinya dalam digitalisasi bisnis kami
+                        sangat berarti."</p>
+                    <div class="flex items-center gap-5">
+                        <div
+                            class="w-12 h-12 rounded-full bg-zinc-800 group-hover:bg-zinc-700 transition-colors flex items-center justify-center text-white font-bold text-sm">
+                            UM</div>
+                        <div>
+                            <div class="font-bold text-white text-sm" data-i18n="testi_4_name">Owner UMKM Lokal</div>
+                            <div class="text-zinc-500 group-hover:text-zinc-400 transition-colors text-[10px] font-bold uppercase tracking-widest mt-1"
+                                data-i18n="testi_4_role">Klien —
+                                Digital Marketing</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+        onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white hover:text-zinc-300 transition" onclick="closeLightbox()">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Preview" class="max-w-full max-h-[90vh] rounded-xl shadow-2xl object-contain"
+            onclick="event.stopPropagation()">
+    </div>
+
     <!-- Footer / Contact -->
     <footer id="contact" class="py-24 px-6 text-center bg-white border-t border-zinc-100">
         <div class="max-w-3xl mx-auto" data-aos="fade-up">
@@ -422,74 +842,168 @@
         <!-- Translations Data -->
         const translations = {
             id: {
-                nav_profile: "Tentang Saya",
-                nav_services: "Layanan",
+                nav_profile: "Tentang",
+                nav_services: "Jasa",
                 nav_experience: "Riwayat",
                 nav_skills: "Keahlian",
                 hero_tag: "TEKNIK MESIN × DIGITAL DEVELOPER",
-                hero_title: "Tentang Saya",
-                hero_bio_1: "Saya <strong>Muhammad Rigel</strong>, kelahiran Gresik, 4 April 1996, saya lulusan <strong>S1 Universitas Muhammadiyah Malang</strong> Jurusan <strong>Teknik Mesin</strong>. Saya sendiri merupakan seorang yang sangat suka dengan tantangan dan hal - hal yang baru, dan ramah dengan orang baru, karena itu saya sangat mampu untuk bekerja sama dengan tim maupun individu.",
-                hero_bio_2: "Perjalanan saya dimulai dari bangku kuliah, saya mempelajari ilmu dasar tentang Teknik Mesin dan desain mekanikal melalui AutoCAD dan Inventor. Di sela kegiatan akademik, saya aktif mengasah kemampuan manajemen dan komunikasi dengan aktif di Organisasi internal maupun external dan mengadakan berbagai event musik serta kompetisi eSports di lingkup kampus maupun luar kampus.",
-                hero_bio_3: "Dan saat ini saya memberanikan diri terjun ke dunia profesional di PT. Sumber Jaya Grup sebagai administrasi. Di sela kesibukan mengelola administrasi operasional, saya menyadari bahwa efisiensi kerja adalah kunci di era digital ini. Hal itulah yang mendorong saya untuk mempelajari dunia IT dan pemrograman guna mengikuti perkembangan zaman.",
-                hero_bio_4: "Saat ini, saya aktif mengembangkan berbagai sistem otomasi dan aplikasi manajemen internal untuk membantu mendigitalisasi proses kerja manual agar menjadi lebih cepat, akurat, dan terintegrasi.",
-                cta_contact: "Hubungi Saya",
-                cta_services: "Lihat Portfolio",
-                section_services: "APA YANG SAYA BISA?",
-                services_subtitle: "Mari Kita Collaborasi",
-                service_1_title: "Custom Apps Development",
-                service_1_desc: "Membangun sistem manajemen yang 100% fit dengan alur kerja bisnis Anda. Dari kasir, gudang, hingga dashboard eksekutif.",
-                service_2_title: "Business Automation",
-                service_2_desc: "Biarkan 'robot' yang bekerja. Saya membuat bot (WA/Telegram) untuk handle tugas rutin agar Anda bisa fokus ke strategi bisnis.",
-                service_3_title: "Professional Branding",
-                service_3_desc: "Website bukan cuma pajangan. Saya bangun landing page yang estetis dan fungsional untuk menaikkan nilai jual brand Anda.",
-                section_experience: "REKAM JEJAK & KREDIBILITAS",
-                present: "SAAT INI",
-                exp_1_role: "Operational Lead & Tech Initiator",
-                exp_1_desc: "Mengelola operasional agen LPG skala besar sekaligus mengembangkan sistem digital internal untuk efisiensi data. Bukti nyata bahwa saya paham kebutuhan bisnis, bukan cuma teknis.",
-                exp_2_role: "Engineering Background",
-                exp_2_desc: "Latar belakang teknik mesin melatih saya berpikir struktural dan berbasis solusi. Skill ini yang saya bawa ke setiap project coding saya.",
-                exp_3_date: "ORGANISASI & KOMUNITAS",
-                exp_3_role: "Kolaborasi & Kepemimpinan",
-                exp_3_item1: "Pengalaman industri di PT. Petrokimia Gresik (Sistem Fabrikasi).",
-                exp_3_item2: "Aktif mengedukasi teknologi di BEM FT UMM.",
-                exp_3_item3: "Membangun jiwa entrepreneurship di Himpunan Mahasiswa.",
-                section_skills: "SENJATA ANDALAN",
-                footer_title: "Punya Ide Liar? Mari Wujudkan."
+                hero_title: "Halo, Saya Rigel.",
+                hero_bio_1: "Berangkat dari latar belakang <strong>Teknik Mesin Universitas Muhammadiyah Malang</strong>, saya selalu senang mengeksplorasi hal-hal baru. Saya tipe orang yang punya rasa ingin tahu tinggi, mudah beradaptasi, dan sangat antusias saat diajak berkolaborasi.",
+                hero_bio_2: "Semasa kuliah, saya bukan cuma nge-gass belajar desain mekanikal dan manufaktur. Menyeimbangkan itu, saya juga aktif kembangin soft-skills. Mulai dari terjun di organisasi, sampai jadi eksekutor lapangan buat berbagai event—dari pagelaran musik sampai turnamen eSports lokal.",
+                hero_bio_3: "Masuk ke dunia profesional di PT. Sumber Jaya Grup, keseharian saya berhadapan langsung dengan urusan operasional dan administrasi. Dari situ, saya makin sadar betapa mahalnya nilai dari \"efisiensi\" dan otomatisasi di era sekarang. Rasa gemas buat berinovasi akhirnya mendorong saya banting setir mendalami IT dan pemrograman.",
+                hero_bio_4: "Kini, fokus utama saya adalah merancang sistem otomasi dan membangun tool manajemen mandiri. Misi saya simpel: menyulap alur kerja pabrikan/operasional manual yang ribet jadi lebih modern, cepat, dan anti-pusing.",
+                cta_contact: "Ngobrol Yuk",
+                cta_services: "Lihat Karya Saya",
+                section_services: "YANG BISA SAYA BANTU",
+                services_subtitle: "Mari Eksekusi Ide Anda",
+                service_1_title: "Custom Aplikasi Web & Desktop",
+                service_1_desc: "Bikin sistem pendukung bisnis yang benar-benar klop dengan alur kerja Anda. Nggak perlu lagi nyesuain diri sama aplikasi template yang ribet.",
+                service_2_title: "Otomasi & Bot Telegram/WA",
+                service_2_desc: "Ngapain masih rekap laporan manual satu-satu? Biar skrip dan bot buatan saya yang beresin rutinitas harian, jadi tim Anda bisa fokus di hal yang lebih penting.",
+                service_3_title: "Landing Page & Web Profil",
+                service_3_desc: "Tingkatkan pamor bisnis dengan website yang bukan cuma sekadar nyala, tapi juga sedap dipandang, responsif, dan ngebangun kepercayaan publik.",
+                section_education: "JEJAK AKADEMIS",
+                edu_1_title: "S1 Teknik Mesin",
+                edu_1_desc: "Nyemplung langsung ke dunia manufaktur dan desain mekanikal. Di sinilah pondasi pemikiran sistematis saya terbentuk.",
+                edu_2_title: "MA (Madrasah Aliyah)",
+                edu_2_desc: "Lulusan Madrasah dengan dasar pondasi agama islam yang kuat, disempurnakan dengan fokus pada ilmu alam.",
+                nav_education: "Pendidikan",
+                section_experience: "REKAM JEJAK PROFESIONAL",
+                present: "SEKARANG",
+                exp_1_role: "Tech Initiator & Ops Lead",
+                exp_1_desc: "Nge-handle langsung alur operasional agen skala besar, sembari nyicil bikin sistem pelacakan digital internalnya. Kombinasi paham lapangan + paham kode.",
+                exp_2_role: "Engineering & Technical Focus",
+                exp_2_desc: "Mental engineer bikin saya terbiasa mikir runtut buat nyelesaiin masalah. Skill esensial yang juga kepake banget waktu nulis logic program.",
+                exp_3_date: "KOMUNITAS & EVENT",
+                exp_3_role: "Kreator & Penggerak",
+                exp_3_item1: "Eksplor langsung atmosfir industri saat magang di departemen Fabrikasi PT Petrokimia Gresik.",
+                exp_3_item2: "Nyemplung di kepanitiaan, berpolitik kampus, sampai rutin bikin eksekusi event dari nol.",
+                exp_3_item3: "Terbiasa mengelola tim, deadline, dan budget secara ketat demi suksesnya suatu agenda.",
+                exp_4_date: "Eksplorasi Lain",
+                exp_4_role: "Marketing & Bisnis Mandiri",
+                section_skills: "ALAT TEMPUR SAYA",
+                stat_years: "Tahun Eksplorasi IT",
+                stat_projects: "Aplikasi Terbuat",
+                stat_clients: "Partner Kolaborasi",
+                stat_bots: "Automasi Aktif",
+                section_portfolio: "SHOWCASE",
+                portfolio_subtitle: "Karya yang Pernah Digarap",
+                proj_1_title: "Bot Otomasi Laporan",
+                proj_1_desc: "Bot Python & Playwright untuk narik laporan operasional harian secara live dan langsung nembak ke grup Telegram internal tim.",
+                proj_2_title: "Sistem Manajemen Bisnis",
+                proj_2_desc: "Aplikasi internal custom yang mencatat setiap pergerakan stok barang, mutasi kasir, sampai laporan keuangan dalam satu sentuhan layar.",
+                proj_3_title: "Situs Portfolio Personal",
+                proj_3_desc: "Merakit desain yang bersih namun fungsional menggunakan HTML, Tailwind, dan JavaScript — yang kodenya lagi Anda nikmati saat ini.",
+                proj_4_title: "Aplikasi Terintegrasi Toko",
+                proj_4_desc: "Aplikasi untuk mengatur manajemen stok gudang dan pengeluaran menjadi tersistem dan selalu sinkron.",
+                proj_5_title: "Web App POS Coffee Shop",
+                proj_5_desc: "Website app lengkap beserta fitur kasir yang tersinkronisasi murni dengan laporan otomatis harian, mingguan, bulanan, bahkan tahunan.",
+                section_gallery: "MOMEN & DIBALIK LAYAR",
+                gallery_subtitle: "Cerita Di Balik Portofolio",
+                gallery_empty: "Koleksi foto sedang disiapkan... Yuk cek lagi lain waktu!",
+                section_certificates: "PENGAKUAN & SERTIFIKASI",
+                certificates_subtitle: "Bukti Valid Kompetensi",
+                cert_empty: "Sertifikat belum dipajang. Segera hadir kembali!",
+                section_testimonials: "APA KATA SUPPORT SYSTEM SAYA",
+                testimonials_subtitle: "Testimoni Rekan & Klien",
+                testi_1_text: "Mas Rigel berhasil ngotak-ngatik rutinitas stok barang yang jadul jadi serba otomatis dan aman. Hasilnya jujur ngebantu kerjaan admin banget di kantor kita.",
+                testi_1_name: "Admin PT SJG",
+                testi_1_role: "Partner Internal",
+                testi_2_text: "Bot yang dibuatin Rigel nge-cut waktu rekap harian secara signifikan. Yang tadinya makan waktu 1 jam tiap nutup shift, sekarang ga nyampe 5 menit selesai sendiri.",
+                testi_2_name: "Operational Head",
+                testi_2_role: "Partner — Bisnis Eksternal",
+                testi_3_text: "Setiap event yang dihandle Mas Rigel selalu rapi eksekusinya. Bawaannya tenang dan solutif tiap ada problem ngedadak di lapangan.",
+                testi_3_name: "Tim Production & EO",
+                testi_3_role: "Kolega Event",
+                testi_4_text: "Punya daya tangkap yang tinggi, ngga malu bertanya buat dalemin kebutuhan user benerannya. Good catch kalau mau dapet developer yang ngerti ranah bisnisnya sekalian.",
+                testi_4_name: "Owner Bisnis Lokal",
+                testi_4_role: "Kolaborator Ide",
+                nav_gallery: "Galeri",
+                nav_certificates: "Sertifikasi",
+                nav_testimonials: "Testimoni",
+                footer_title: "Punya Ide Seru? Mari Dieksekusi."
             },
             en: {
-                nav_profile: "About Me",
+                nav_profile: "About",
                 nav_services: "Services",
-                nav_experience: "History",
-                nav_skills: "Skills",
-                hero_tag: "MECHANICAL ENGINEERING × DIGITAL DEVELOPER",
-                hero_title: "About Me",
-                hero_bio_1: "I am <strong>Muhammad Rigel</strong>, born in Gresik, April 4th, 1996, a graduate of <strong>S1 University of Muhammadiyah Malang</strong> majoring in <strong>Mechanical Engineering</strong>. I am someone who loves challenges and new experience, and I am friendly with new people, making me highly capable of working in both teams and individually.",
-                hero_bio_2: "My journey started in college, where I learned the basics of Mechanical Engineering and mechanical design using AutoCAD and Inventor. Amidst academic activities, I actively honed my management and communication skills by participating in internal and external organizations and organizing various music events and eSports competitions both on and off campus.",
-                hero_bio_3: "Currently, I have ventured into the professional world at PT. Sumber Jaya Grup as an administrator. Amidst the busyness of managing operational administration, I realized that work efficiency is key in this digital era. This drove me to learn IT and programming to keep up with the times.",
-                hero_bio_4: "Currently, I am actively developing various automation systems and internal management applications to help digitize manual work processes to make them faster, accurate, and integrated.",
-                cta_contact: "Contact Me",
-                cta_services: "View Portfolio",
-                section_services: "WHAT CAN I DO?",
-                services_subtitle: "Let's Collaborate",
-                service_1_title: "Custom Apps Development",
-                service_1_desc: "Building management systems that 100% fit your business workflow. From POS, inventory, to executive dashboards.",
-                service_2_title: "Business Automation",
-                service_2_desc: "Let the 'bots' do the work. I create bots (WA/Telegram) to handle routine tasks so you can focus on business strategy.",
-                service_3_title: "Professional Branding",
-                service_3_desc: "A website isn't just a display. I build aesthetic and functional landing pages to elevate your brand value.",
-                section_experience: "TRACK RECORD & CREDIBILITY",
-                present: "CURRENTLY",
-                exp_1_role: "Operational Lead & Tech Initiator",
-                exp_1_desc: "Managing large-scale LPG agency operations while developing internal digital systems for data efficiency. Proof that I understand business needs, not just tech.",
-                exp_2_role: "Engineering Background",
-                exp_2_desc: "Mechanical engineering background trained me to think structurally and solution-oriented. I bring this skill to every coding project.",
-                exp_3_date: "COMMUNITY & ORG",
-                exp_3_role: "Collaboration & Leadership",
-                exp_3_item1: "Industrial experience at PT. Petrokimia Gresik (Fabrication Systems).",
-                exp_3_item2: "Active in tech education at BEM FT UMM.",
-                exp_3_item3: "Building entrepreneurship spirit at Student Association.",
-                section_skills: "MY ARSENAL",
-                footer_title: "Have a Wild Idea? Let's Build It."
+                nav_experience: "Track Record",
+                nav_skills: "Arsenal",
+                hero_tag: "MECH ENGR × DIGITAL MAKER",
+                hero_title: "Hi, I'm Rigel.",
+                hero_bio_1: "Originally stepping out with a <strong>Mechanical Engineering</strong> degree from the <strong>University of Muhammadiyah Malang</strong>, my curiosity never stops. I am naturally an adaptable person who really thrives when collaborating and solving fresh problems.",
+                hero_bio_2: "During uni, it wasn't all about gears and AutoCAD. I actually threw myself into the field to lead student organizations and pull off actual large-scale events—running both local musical concerts and competitive eSports tourneys.",
+                hero_bio_3: "My introduction to professional workloads hit when I joined PT. Sumber Jaya Grup managing daily admin and operations. Experiencing manual processes firsthand quickly taught me that efficiency is vital. That exact frustration drove me directly into IT, scripting, and development.",
+                hero_bio_4: "Nowadays, I focus on building digital systems and automation. My clear-cut goal: flip messy and outdated operational pipelines into fast, fluid, and headache-free digital hubs.",
+                cta_contact: "Let's Talk",
+                cta_services: "See My Works",
+                section_services: "HOW I CAN HELP",
+                services_subtitle: "Let's Build Your Vision",
+                service_1_title: "Tailor-made Web Apps",
+                service_1_desc: "Tired of tweaking generic software to match your specific workflow? I build custom POS, inventory, and dashboards that behave exactly as you command.",
+                service_2_title: "Smart Bots & Automation",
+                service_2_desc: "Stop doing copy-paste loops. My Telegram & WA bots run the daily reporting for you, giving you back those 2 hours you lost every morning.",
+                service_3_title: "Modern Web Presence",
+                service_3_desc: "A neat business card isn't enough in 2024. Your business deserves a lightning-fast, smooth, and trustworthy landing page that sparks conversions.",
+                section_education: "ACADEMICS",
+                edu_1_title: "Bachelor of Mech Engineering",
+                edu_1_desc: "Grasping how physical systems move, crash, and integrate. This root helps me map out digital systems logically and without failure.",
+                edu_2_title: "Senior High School",
+                edu_2_desc: "Solidifying my foundation with an intensive focus on both Islamic studies and Natural Sciences.",
+                nav_education: "Education",
+                section_experience: "PROFESSIONAL MILESTONES",
+                present: "PRESENT",
+                exp_1_role: "Tech Initiator & Ops Lead",
+                exp_1_desc: "Governing logistics workflows by daylight, drafting the internal app to phase out manual logs by night. Pure intersection of domain + dev.",
+                exp_2_role: "Engineering & Technical Focus",
+                exp_2_desc: "That distinct engineer mindset means I cut straight to the core issue. I map out solutions rigorously—a trait very much loved by any codeblock.",
+                exp_3_date: "COMMUNITY & EVENT SPACE",
+                exp_3_role: "Field Organizer",
+                exp_3_item1: "Gained direct heavy-industry insight interning at Fabrication Division in PT Petrokimia Gresik.",
+                exp_3_item2: "Navigated campus bureaucracy, student affairs, and executed actual public affairs from absolute scratch.",
+                exp_3_item3: "Used to handling strict time frames, managing people dynamically, and balancing tight budgets.",
+                exp_4_date: "OTHER VENTURES",
+                exp_4_role: "Marketing & Entrepreneurial Sprit",
+                section_skills: "TECH ARSENAL",
+                stat_years: "Years Digging IT",
+                stat_projects: "Apps Forged",
+                stat_clients: "Partnerships",
+                stat_bots: "Active Automa",
+                section_portfolio: "LATEST WORKS",
+                portfolio_subtitle: "What I've Been Building",
+                proj_1_title: "Automated Daily-Report Bot",
+                proj_1_desc: "Bridging Python and Playwright to rip daily metrics out of closed systems straight into our team's Telegram hub.",
+                proj_2_title: "Internal Operations Hub",
+                proj_2_desc: "An end-to-end custom business platform tracking live stock shifts, employee shifts, and generating financial sanity-checks instantly.",
+                proj_3_title: "Personal Portfolio Interface",
+                proj_3_desc: "Crafted this clean yet functional portfolio using straight HTML, Tailwind CSS, & pure JS to showcase performance over bloat.",
+                proj_4_title: "Retail Integrated App",
+                proj_4_desc: "A dedicated application bridging warehouse stock management directly with tracking everyday expenses seamlessly.",
+                proj_5_title: "Coffee Shop POS Web App",
+                proj_5_desc: "A modern web app complete with POS functionality that synchronizes sales to auto-generate daily up to yearly reports.",
+                section_gallery: "BTS & MOMENTS",
+                gallery_subtitle: "The Journey So Far",
+                gallery_empty: "Digging up the archives. Check back to see actual photos!",
+                section_certificates: "CREDENTIALS",
+                certificates_subtitle: "Verified Capabilities",
+                cert_empty: "Fetching certificates. Coming super soon!",
+                section_testimonials: "WORD OF MOUTH",
+                testimonials_subtitle: "Client & Colleague Notes",
+                testi_1_text: "Rigel tore down our tedious stock logging mess and replaced it with a sleek, automated process. Absolute game-changer for our internal admin reliability.",
+                testi_1_name: "Admin Team",
+                testi_1_role: "Internal Collaborators",
+                testi_2_text: "That bot runs perfectly. Instead of taking an hour each night manually tallying up summaries, the team is completely hands-off and gets the alert.",
+                testi_2_name: "Operational Head",
+                testi_2_role: "External Logistics Partner",
+                testi_3_text: "Coordination is flawless whenever Rigel jumps in. Reliable off-screen and proactive whenever a wrench is thrown in the middle of a big gig.",
+                testi_3_name: "Event Prod Team",
+                testi_3_role: "Fellow Organizers",
+                testi_4_text: "Highly perceptive and constantly willing to dig into the actual business logic first before writing any code. That's a rare and precious find.",
+                testi_4_name: "SME Owner",
+                testi_4_role: "Business Brainstormer",
+                nav_gallery: "Gallery",
+                nav_certificates: "Badges",
+                nav_testimonials: "Testimonials",
+                footer_title: "Got a Wild Idea? Let's Brew It."
             }
         };
 
@@ -508,7 +1022,6 @@
             elements.forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[currentLang][key]) {
-                    // Check if content has HTML tags
                     if (element.children.length > 0 || translations[currentLang][key].includes('<')) {
                         element.innerHTML = translations[currentLang][key];
                     } else {
@@ -517,6 +1030,84 @@
                 }
             });
         }
+
+        // ── Dynamic Image Loader ──────────────────────────────────────────
+        function loadImages(prefix, count, gridId, emptyId, labelFn) {
+            const grid = document.getElementById(gridId);
+            const empty = document.getElementById(emptyId);
+            let loaded = 0;
+            let checked = 0;
+
+            for (let i = 1; i <= count; i++) {
+                const src = prefix + i + '.jpg';
+                const img = new Image();
+                img.onload = () => {
+                    loaded++;
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'relative group overflow-hidden rounded-2xl cursor-pointer shadow-sm border border-zinc-200 bg-zinc-50';
+                    // Sertifikat dibiarkan aspect ratio natural agar textnya tidak terpotong (cropped). Galeri 1:1 biar rapi.
+                    wrapper.style.aspectRatio = prefix === 'sertifikat' ? 'auto' : '1';
+
+                    wrapper.innerHTML = `
+                        <div class="w-full h-full relative" onclick="openLightbox('${src}')">
+                            <img src="${src}" alt="${labelFn(i)}" loading="lazy"
+                                class="w-full h-full ${prefix === 'sertifikat' ? 'object-contain' : 'object-cover'} transition-transform duration-500 group-hover:scale-105">
+                            
+                            <!-- Overlay Hover -->
+                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 backdrop-blur-sm z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white mb-2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                <span class="text-white text-[10px] font-bold uppercase tracking-[0.2em] px-4 text-center mt-2 border border-white/30 py-1.5 rounded-full">Perbesar</span>
+                            </div>
+
+                            <!-- Label Tagline (Hanya untuk Galeri) -->
+                            ${prefix !== 'sertifikat' ? `
+                            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none z-0 transition-opacity duration-300 group-hover:opacity-0">
+                                <span class="text-white text-[10px] font-bold uppercase tracking-widest drop-shadow-md">${labelFn(i)}</span>
+                            </div>
+                            ` : ''}
+                        </div>`;
+                    grid.appendChild(wrapper);
+                    check();
+                };
+                img.onerror = () => { check(); };
+                img.src = src;
+            }
+
+            function check() {
+                checked++;
+                if (checked === count) {
+                    if (loaded === 0) {
+                        empty.classList.remove('hidden');
+                    } else {
+                        empty.classList.add('hidden');
+                    }
+                    lucide.createIcons();
+                }
+            }
+        }
+
+        // Load gallery images: galeri1.jpg – galeri10.jpg
+        loadImages('galeri', 10, 'gallery-grid', 'gallery-empty', i => 'Galeri ' + i);
+
+        // Load certificate images: sertifikat1.jpg – sertifikat10.jpg
+        loadImages('sertifikat', 10, 'cert-grid', 'cert-empty', i => 'Sertifikat ' + i);
+
+        // ── Lightbox ─────────────────────────────────────────────────────
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.getElementById('lightbox-img').src = '';
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
     </script>
 </body>
 
