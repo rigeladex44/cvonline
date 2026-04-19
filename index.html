@@ -129,7 +129,7 @@
                     Jejak</a>
                 <a href="#services" class="hover:text-black transition-colors" data-i18n="nav_services">Solusi</a>
                 <a href="#skills" class="hover:text-black transition-colors" data-i18n="nav_skills">Skills</a>
-                <a href="#gallery" class="hover:text-black transition-colors" data-i18n="nav_gallery">Galeri</a>
+
                 <a href="#certificates" class="hover:text-black transition-colors"
                     data-i18n="nav_certificates">Sertifikat</a>
                 <a href="#testimonials" class="hover:text-black transition-colors"
@@ -679,20 +679,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-24 bg-zinc-50">
-        <div class="max-w-6xl mx-auto px-6 md:px-12">
-            <div class="mb-16" data-aos="fade-up">
-                <span class="text-xs font-bold uppercase tracking-[0.3em] text-zinc-400 mb-4 block"
-                    data-i18n="section_gallery">MOMEN & PENGALAMAN</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-black" data-i18n="gallery_subtitle">Galeri
-                    Perjalanan</h2>
-            </div>
-            <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
-            <p id="gallery-empty" class="hidden text-center text-zinc-400 text-sm py-8" data-i18n="gallery_empty">Galeri
-                segera hadir — upload galeri1.jpg s/d galeri10.jpg</p>
-        </div>
-    </section>
 
     <!-- Certificates Section -->
     <section id="certificates" class="py-24 bg-white">
@@ -1134,8 +1120,6 @@
             }
         }
 
-        // Load gallery images: galeri1.jpg – galeri10.jpg
-        loadImages('galeri', 10, 'gallery-grid', 'gallery-empty', i => 'Galeri ' + i);
 
         // Load certificate images: sertifikat1.jpg – sertifikat10.jpg
         loadImages('sertifikat', 10, 'cert-grid', 'cert-empty', i => 'Sertifikat ' + i);
